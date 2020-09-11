@@ -1,8 +1,6 @@
-on:
-  push:
-    # Sequence of patterns matched against refs/tags
-    tags:
-    - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+name: Release
+
+on: [push]
 
 jobs:
   build:
@@ -31,4 +29,4 @@ jobs:
           upload_url: https://uploads.github.com/repos/MazenEbada/Smart-Grid-ICT-Resilience-Framework/releases/21658915/assets{?name,label}
           asset_path: ./releng/smartgrid.newsimcontrol.rcp.launch/target/smartgrid.rcp.product-1.0.0-SNAPSHOT.zip
           asset_name: smartgrid.rcp.product-1.0.0-SNAPSHOT.zip
-          asset_content_type: application/zip 
+          asset_content_type: application/zip
