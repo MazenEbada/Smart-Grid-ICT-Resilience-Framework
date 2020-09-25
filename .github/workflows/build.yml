@@ -32,7 +32,7 @@ jobs:
         draft: false
         prerelease: false
     - name: Upload Release Asset - Windows
-      id: upload-release-asset
+      id: upload-release-asset_win
       uses: actions/upload-release-asset@v1.0.1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -42,7 +42,7 @@ jobs:
         asset_name: win_smartgrid.rcp.product-1.0.0-SNAPSHOT.zip
         asset_content_type: application/zip
     - name: Upload Release Asset - Linux
-      id: upload-release-asset
+      id: upload-release-asset_linux
       uses: actions/upload-release-asset@v1.0.1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -52,7 +52,7 @@ jobs:
         asset_name: linux_smartgrid.rcp.product-1.0.0-SNAPSHOT.zip
         asset_content_type: application/zip
     - name: Upload Release Asset - Mac
-      id: upload-release-asset
+      id: upload-release-asset_mac
       uses: actions/upload-release-asset@v1.0.1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
